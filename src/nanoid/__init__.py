@@ -1,5 +1,5 @@
-from .nanoid import Nanoid
-from .nanoid import generate
+from nanoid.nanoid import Nanoid
+from nanoid.nanoid import generate
 
 import dir_ops.dir_ops as do
 import os
