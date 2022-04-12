@@ -1,4 +1,4 @@
-from .nanoid import *
+from .nanoid_main import *
 
 import dir_ops as do
 import os
