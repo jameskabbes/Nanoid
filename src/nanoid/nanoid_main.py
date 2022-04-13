@@ -45,12 +45,3 @@ def generate( **kwargs ):
     """generates a Nanoid class and returns the nanoid attribute"""
 
     return Nanoid( **kwargs ).nanoid
-
-def run( *sys_args ):
-
-    id = generate()
-    print (id)
-
-if __name__ == '__main__':
-    
-    run()
