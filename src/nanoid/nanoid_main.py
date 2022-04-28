@@ -40,8 +40,8 @@ class Nanoid( ParentClass ):
         self.nanoid = string
 
 
-def generate( **kwargs ):
+def generate( **kwargs ) -> str:
 
-    """generates a Nanoid class and returns the nanoid attribute"""
+    """Constructs a Nanoid class with given kwargs, returns the nanoid attribute"""
 
     return Nanoid( **kwargs ).nanoid
