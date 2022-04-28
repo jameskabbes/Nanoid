@@ -14,7 +14,7 @@ For more in-depth documentation, read the information provided on the Pages. Or 
 `import nanoid`
 
 ## Get a nanoid string
-```
+```python
 nanoid_string = nanoid.generate()
 print (nanoid_string)
 ```
@@ -28,7 +28,7 @@ print (Obj.alphabet)
 ```
 
 ## Set custom generation parameters
-```
+```python
 print (nanoid.generate( size = 10, alphabet = '0123456789ABCDEF' ))
 Obj = nanoid.Nanoid( size = 10, alphabet = '0123456789ABCDEF' )
 print (Obj.nanoid)
