@@ -21,12 +21,14 @@ class Nanoid( ParentClass ):
         #Generate the NanoID string
         self.generate()
 
-    def print_imp_atts(self, **kwargs):
+    def print_imp_atts(self, **kwargs): 
 
+        #inherited from ParentClass
         return self._print_imp_atts_helper( atts= ['nanoid','size','alphabet'], **kwargs )
 
-    def print_one_line_atts(self, **kwargs):
+    def print_one_line_atts(self, **kwargs): 
 
+        #inherited from ParentClass
         return self._print_one_line_atts_helper( atts = ['type','nanoid'], **kwargs )  
 
     def generate( self ):
