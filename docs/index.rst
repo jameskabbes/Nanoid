@@ -1,73 +1,52 @@
 ====================================================================================================================================================================================
-ml_pipeline:
+nanoid:
 ====================================================================================================================================================================================
 
 About
 ====================================================================================================================================================================================
-A centralized pattern for creating Machine Learning pipelines
+Simple Python library for generating NanoIDs
 
-Description
+Installation
 ====================================================================================================================================================================================
-Contains a host of tools for standardizing the format of machine learning pipelines. Provides methods for querying databases, cleaning data, preprocessing data, model operations, exporting results, and more. Each machine learning project is a "child" of this template, with the ability to overwrite any of the default class attributes/methods.
+``pip install kabbes_nanoid``
 
-Code Overview
+Project Links
 ====================================================================================================================================================================================
-Read this high-level overview is necessary to understand how the package operates.
-
-Code Hierarchy Models → Model → Input_Files → Input_File → Features → Feature
-
-Each point in the hierarchy has certain methods and attributes associated with it. These methods give you the functionality for operating the pipeline.
-
-First Time Setup
-====================================================================================================================================================================================
-If you have not installed the garden, follow the instructions here: `the_garden <https://www.github.com/jameskabbes/the_garden>`_
+`PyPI <https://www.github.com/jameskabbes/kabbes_nanoid>`_
+`GitHub <https://www.github.com/jameskabbes/nanoid>`_
 
 Usage
 ====================================================================================================================================================================================
-High-level overviews for common operations. For more detailed instructions, checkout the Pages.
+For more in-depth documentation, read the information provided on the Pages. Or better yet, read the source code.
 
-Initializing a Repo for ml_pipeline
+Importing
 ====================================================================================================================================================================================
-1. Navigate to a directory in the command prompt
+``import nanoid``
 
-     ``cd C:/Path/to/Repo``
-
-2. Call the package's main script
-
-      ``python -m ml_pipeline``
-
-Navigating the Menu
+Get a nanoid string
 ====================================================================================================================================================================================
-1. Run python main_XXX.py This opens the Models options screen, along with the options for the "Models" class instance.
-2. To navigate one level down to a Model, select the option "Open Model"
-3. Select a Model from the list.
-4. Now in the Model options screen, press enter to navigate back up to Models.
-5. You can navigate from Models->Model->Input_Files->Input_File->Features->Feature and all the way back up.
-6. Option 1 shows "Open XXXXX" to navigate to the next level down in the tree.
-7. Press enter to exit back up to the previous level.
+``python
+nanoid_string = nanoid.generate()
+print (nanoid_string)
+``
 
-Query new Raw Data
+Generate a Nanoid object
 ====================================================================================================================================================================================
-1. python main_XXX.py
-2. At the Models options screen, select "Open Model".
-3. Select any Model from the list (this selection does not matter)
-4. In the Model options screen, select "Open Input Files".
-5. Select the first option.
-6. In the Input Files options screen, select "Open Input File"
-7. Select the Input File for which you would like to query new data.
-8. In the Input File options screen, select "Query from Source Database"
+``python
+Obj = nanoid.Nanoid()
+print (Obj.nanoid)
+print (Obj.size)
+print (Obj.alphabet)
+``
 
-Move Query Staged data to Raw Data
+Set custom generation parameters
 ====================================================================================================================================================================================
-1. python main_XXX.py
-2.At the Models options screen, select the option for "Open Model"
-3. Select the Model you would like to run
-4.In the Model options screen, select the option for "Run Pipeline"
+``python
+print (nanoid.generate( size = 10, alphabet = '0123456789ABCDEF' ))
+Obj = nanoid.Nanoid( size = 10, alphabet = '0123456789ABCDEF' )
+print (Obj.nanoid)
+``
 
-Running all Models
-====================================================================================================================================================================================
-1. python main_XXX.py
-2. At the Models options screen, select the option for "Run Models"
 
 Author(s)
 ====================================================================================================================================================================================
@@ -84,8 +63,6 @@ Author(s)
       :numbered:
 
       Home page <self>
-      ml_pipeline <_autosummary/src>
-
-
+      nanoid <_autosummary/src>
 
 
