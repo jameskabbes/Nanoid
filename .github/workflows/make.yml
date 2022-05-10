@@ -24,6 +24,7 @@ jobs:
         uses: sphinx-notes/pages@v2
       - name: commit to gh-pages
         run: |
+          git push origin gh-pages
           git add -f _autosummary/
           git commit -am "_autosummary"
           git push -f origin gh-pages
