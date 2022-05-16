@@ -20,7 +20,7 @@ print (nanoid_string)
 ```
 
 ## Generate a Nanoid object
-```
+```python
 Obj = nanoid.Nanoid()
 print (Obj.nanoid)
 print (Obj.size)
