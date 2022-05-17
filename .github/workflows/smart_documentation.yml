@@ -6,12 +6,13 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v2
-      - name: Install dependencies
-        run: |
+      - name: Install dependencies 
+        run: |           # sudo dpkg -i $DEB is used for installing pandoc for converting MD to RST
           python -m pip install --upgrade pip
           pip install sphinx-autodoc-typehints
           pip install sphinx_rtd_theme
           pip install kabbes_smart_documentation
+          sudo dpkg -i $DEB  
           python -m smart_documentation template=default
       - uses: actions/checkout@master
         with:
