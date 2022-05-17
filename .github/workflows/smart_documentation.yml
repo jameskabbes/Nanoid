@@ -1,18 +1,20 @@
 name: gh-pages auto builder
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v2
-      - name: Install dependencies 
-        run: |           # sudo dpkg -i $DEB is used for installing pandoc for converting MD to RST
+      - name: Install dependencies
+        run: |
           python -m pip install --upgrade pip
           pip install sphinx-autodoc-typehints
           pip install sphinx_rtd_theme
           pip install kabbes_smart_documentation
-          python -m smart_documentation template=default
       - uses: actions/checkout@master
         with:
           requirements: src/requirements.txt
@@ -21,8 +23,10 @@ jobs:
         run: |
           touch .nojekyll
       - uses: actions/checkout@master
-      - name: Build and Commit
-        uses: sphinx-notes/pages@v2
+      - name: Generate Smart Doc files
+        run: |
+          python -m smart_documentation template=default
+      - uses: sphinx-notes/pages@v2
       - name: commit to gh-pages
         run: |
           git push origin gh-pages
