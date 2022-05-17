@@ -12,7 +12,6 @@ jobs:
           pip install sphinx-autodoc-typehints
           pip install sphinx_rtd_theme
           pip install kabbes_smart_documentation
-          sudo dpkg -i $DEB  
           python -m smart_documentation template=default
       - uses: actions/checkout@master
         with:
