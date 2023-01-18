@@ -1,18 +1,19 @@
 import kabbes_nanoid
-import kabbes_user_client
+import kabbes_client
 import py_starter as ps
 
-class Client( kabbes_nanoid.Nanoid ):
+class Client:
 
-    BASE_CONFIG_DICT = {
-        "_Dir": kabbes_nanoid._Dir,
-    }
+    _BASE_DICT = {}
 
-    def __init__( self, dict={}, **kwargs ):
+    def __init__( self, dict={} ):
 
-        dict = ps.merge_dicts( Client.BASE_CONFIG_DICT, dict )
-        self.cfg_nano = kabbes_user_client.Client( dict=dict, **kwargs ).cfg
-        kabbes_nanoid.Nanoid.__init__( self )
+        d = {}
+        d.update( Client._BASE_DICT )
+        d.update( dict )
+
+        self.Package = kabbes_client.Package( kabbes_nanoid._Dir, dict=d )
+        self.cfg_nano = self.Package.cfg
 
     def make_Nanoid( self, **kwargs ):
 
