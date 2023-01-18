@@ -1,8 +1,9 @@
 import kabbes_nanoid
 import kabbes_client
 import py_starter as ps
+from parent_class import ParentClass
 
-class Client:
+class Client( ParentClass ):
 
     _BASE_DICT = {}
 
