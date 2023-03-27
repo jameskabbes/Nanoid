@@ -1,0 +1,29 @@
+kabbes\_nanoid package
+======================
+
+Submodules
+----------
+
+kabbes\_nanoid.Client module
+----------------------------
+
+.. automodule:: kabbes_nanoid.Client
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+kabbes\_nanoid.Nanoid module
+----------------------------
+
+.. automodule:: kabbes_nanoid.Nanoid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: kabbes_nanoid
+   :members:
+   :undoc-members:
+   :show-inheritance:
