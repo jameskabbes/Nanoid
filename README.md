@@ -1,8 +1,8 @@
-[GitHub Pages](https://jameskabbes.github.io/nanoid)<br>
-[PyPI](https://pypi.org/project/kabbes-nanoid)
-
 # nanoid
 Simple Python library for generating NanoIDs
+
+[Documentation](https://jameskabbes.github.io/nanoid)<br>
+[PyPI](https://pypi.org/project/kabbes-nanoid)
 
 # Installation
 `pip install kabbes_nanoid`
