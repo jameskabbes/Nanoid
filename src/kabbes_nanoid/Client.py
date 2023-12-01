@@ -1,6 +1,6 @@
 import kabbes_nanoid
 import kabbes_client
-import py_starter as ps
+import py_seedlings as ps
 from parent_class import ParentClass
 
 class Client( ParentClass ):
